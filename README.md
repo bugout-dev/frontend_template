@@ -5,7 +5,7 @@ This is a [bugout-dev](https://github.com/bugout-dev) frontend app template ment
 1. `npx create-next-app app-name -e https://github.com/bugout-dev/frontend_template`
 2. `cd app-name`
 3. `cp sample.env my.env` and setup variables
-4.  Modify `src/core/constants.js` to set up in app variables 
+4.  Modify `src/core/constants.js` to configure app constants 
 
 ## Getting Started
 
