@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o build",
+    "build": "yarn generate_classes && next build && next export -o build",
     "start": "next start",
     "lint": "eslint ./ --ext js,jsx,ts,tsx --fix",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    "pretty": "prettier --write \"./**/*.{js,jsx,json,ts,tsx}\"",
+    "generate_classes": "typechain --target=web3-v1 --out-dir types/contracts '.abi/*.json'"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
@@ -59,7 +60,9 @@
     "@babel/eslint-plugin": "^7.13.16",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@testing-library/dom": "^7.31.2",
+    "@typechain/web3-v1": "^5.0.0",
     "@types/react": "17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
     "axios-mock-adapter": "^1.19.0",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
@@ -69,6 +72,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-unused-imports": "^1.1.1",
     "prettier": "^2.2.1",
+    "typechain": "^7.0.0",
     "typescript": "4.3.5"
   }
 }
